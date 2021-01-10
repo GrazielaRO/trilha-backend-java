@@ -1,4 +1,4 @@
-package br.com.zup.estrelas.customerbase.services;
+package br.com.zup.estrelas.customerbase.service.impl;
 
 import java.util.List;
 
@@ -11,6 +11,7 @@ import br.com.zup.estrelas.customerbase.dto.UpdateCustomerDataDTO;
 import br.com.zup.estrelas.customerbase.entities.Customer;
 import br.com.zup.estrelas.customerbase.exceptions.BusinessRuleException;
 import br.com.zup.estrelas.customerbase.repositories.CustomerRepository;
+import br.com.zup.estrelas.customerbase.services.CustomerService;
 
 @Service
 public class CustomerServiceImpl implements CustomerService{
@@ -23,7 +24,7 @@ public class CustomerServiceImpl implements CustomerService{
 	
 	@Override
 	public Customer insert(InsertCustomerDTO customerDTO) throws BusinessRuleException {
-		if (repository.existisByCpf(customerDTO.getCpf())) {
+		if (repository.existsById(customerDTO.getCpf())) {
 			throw new BusinessRuleException (CUSTUMER_ALREADY_EXISTS);
 		}
 		Customer customer = insertCustomer(customerDTO);

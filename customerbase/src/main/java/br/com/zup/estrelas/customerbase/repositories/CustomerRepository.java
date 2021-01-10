@@ -7,6 +7,4 @@ import br.com.zup.estrelas.customerbase.entities.Customer;
 @Repository
 public interface CustomerRepository extends CrudRepository<Customer, String>{
 	
-	boolean existisByCpf(String cpf);
-
 }
