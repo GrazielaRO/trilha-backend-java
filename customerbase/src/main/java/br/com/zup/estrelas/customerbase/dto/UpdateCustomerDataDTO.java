@@ -12,7 +12,7 @@ public class UpdateCustomerDataDTO {
 	private String name;
 	
 	private Date birthDate;
-	
+		
 	private String email;
 	
 	private String phoneNumber;

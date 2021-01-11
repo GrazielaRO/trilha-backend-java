@@ -68,6 +68,7 @@ public class CustomerServiceImpl implements CustomerService{
 	private Customer updateCustomerData(String cpf, UpdateCustomerDataDTO updateCustomerDataDTO) {
 		Customer customer = new Customer();
 		BeanUtils.copyProperties(updateCustomerDataDTO, customer);
+		customer.setCpf(cpf);
 		
 		return customer;		
 	}

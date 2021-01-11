@@ -48,7 +48,7 @@ public class CustomerController {
 	
 	@ResponseStatus(HttpStatus.OK)
 	@PutMapping(path = "/{cpf}")
-	public Customer updateData (@PathVariable String cpf, UpdateCustomerDataDTO updateCustomerDataDTO) throws BusinessRuleException {
+	public Customer updateData (@PathVariable String cpf, @RequestBody UpdateCustomerDataDTO updateCustomerDataDTO) throws BusinessRuleException {
 		return service.updateData(cpf, updateCustomerDataDTO);
 	}
 	
