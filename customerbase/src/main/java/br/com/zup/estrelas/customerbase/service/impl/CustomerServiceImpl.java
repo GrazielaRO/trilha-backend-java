@@ -6,8 +6,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.zup.estrelas.customerbase.dto.InsertCustomerDTO;
-import br.com.zup.estrelas.customerbase.dto.UpdateCustomerDataDTO;
+import br.com.zup.estrelas.customerbase.dto.CustomerDTO;
 import br.com.zup.estrelas.customerbase.entities.Customer;
 import br.com.zup.estrelas.customerbase.exceptions.BusinessRuleException;
 import br.com.zup.estrelas.customerbase.repositories.CustomerRepository;
@@ -23,7 +22,7 @@ public class CustomerServiceImpl implements CustomerService{
 	CustomerRepository repository;
 	
 	@Override
-	public Customer insert(InsertCustomerDTO customerDTO) throws BusinessRuleException {
+	public Customer insert(CustomerDTO customerDTO) throws BusinessRuleException {
 		if (repository.existsById(customerDTO.getCpf())) {
 			throw new BusinessRuleException (CUSTUMER_ALREADY_EXISTS);
 		}
@@ -42,11 +41,11 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 	
 	@Override
-	public Customer updateData(String cpf, UpdateCustomerDataDTO updateCustomerDataDTO) throws BusinessRuleException {
+	public Customer updateData(String cpf, CustomerDTO customerDTO) throws BusinessRuleException {
 		if (!repository.existsById(cpf)) {
 			throw new BusinessRuleException (CUSTOMER_NOT_FOUND);
 		}
-		Customer customer = updateCustomerData(cpf, updateCustomerDataDTO);
+		Customer customer = updateCustomerData(cpf, customerDTO);
 		return repository.save(customer);
 	}
 	
@@ -58,16 +57,16 @@ public class CustomerServiceImpl implements CustomerService{
 		repository.deleteById(cpf);
 	}
 	
-	private Customer insertCustomer(InsertCustomerDTO customerDTO) {
+	private Customer insertCustomer(CustomerDTO customerDTO) {
 		Customer customer = new Customer();
 		BeanUtils.copyProperties(customerDTO, customer);
 		
 		return customer;
 	}
 	
-	private Customer updateCustomerData(String cpf, UpdateCustomerDataDTO updateCustomerDataDTO) {
+	private Customer updateCustomerData(String cpf, CustomerDTO customerDTO) {
 		Customer customer = new Customer();
-		BeanUtils.copyProperties(updateCustomerDataDTO, customer);
+		BeanUtils.copyProperties(customerDTO, customer);
 		customer.setCpf(cpf);
 		
 		return customer;		

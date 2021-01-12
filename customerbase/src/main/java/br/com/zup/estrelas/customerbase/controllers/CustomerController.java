@@ -2,6 +2,8 @@ package br.com.zup.estrelas.customerbase.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -15,8 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.zup.estrelas.customerbase.dto.InsertCustomerDTO;
-import br.com.zup.estrelas.customerbase.dto.UpdateCustomerDataDTO;
+import br.com.zup.estrelas.customerbase.dto.CustomerDTO;
 import br.com.zup.estrelas.customerbase.entities.Customer;
 import br.com.zup.estrelas.customerbase.exceptions.BusinessRuleException;
 import br.com.zup.estrelas.customerbase.services.CustomerService;
@@ -30,7 +31,7 @@ public class CustomerController {
 	
 	@ResponseStatus(HttpStatus.CREATED)
 	@PostMapping
-	public Customer isert(@RequestBody InsertCustomerDTO insertCustomerDTO) throws BusinessRuleException {
+	public Customer isert(@Valid @RequestBody CustomerDTO insertCustomerDTO) throws BusinessRuleException {
 		return service.insert(insertCustomerDTO);
 	}
 	
@@ -48,8 +49,8 @@ public class CustomerController {
 	
 	@ResponseStatus(HttpStatus.OK)
 	@PutMapping(path = "/{cpf}")
-	public Customer updateData (@PathVariable String cpf, @RequestBody UpdateCustomerDataDTO updateCustomerDataDTO) throws BusinessRuleException {
-		return service.updateData(cpf, updateCustomerDataDTO);
+	public Customer updateData (@PathVariable String cpf, @Valid @RequestBody CustomerDTO customerDTO) throws BusinessRuleException {
+		return service.updateData(cpf, customerDTO);
 	}
 	
 	@ResponseStatus(HttpStatus.NO_CONTENT)
