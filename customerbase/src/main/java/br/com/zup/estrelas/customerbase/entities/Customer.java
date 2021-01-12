@@ -4,6 +4,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -18,6 +20,11 @@ import lombok.NoArgsConstructor;
 @Table(name = "customer")
 public class Customer {
 	
+	@Column(unique = true, nullable = false)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	private Long id;
+	
 	@Column(nullable = false)
 	private String name;
 	
@@ -25,7 +32,6 @@ public class Customer {
 	private Date birthDate;
 	
 	@Column(nullable = false, unique = true)
-	@Id
 	private String cpf;
 	
 	@Column(nullable = false)

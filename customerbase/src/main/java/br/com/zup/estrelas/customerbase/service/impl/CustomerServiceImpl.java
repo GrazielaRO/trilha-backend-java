@@ -23,7 +23,7 @@ public class CustomerServiceImpl implements CustomerService{
 	
 	@Override
 	public Customer insert(CustomerDTO customerDTO) throws BusinessRuleException {
-		if (repository.existsById(customerDTO.getCpf())) {
+		if (repository.existsByCpf(customerDTO.getCpf())) {
 			throw new BusinessRuleException (CUSTUMER_ALREADY_EXISTS);
 		}
 		Customer customer = insertCustomer(customerDTO);
@@ -37,24 +37,23 @@ public class CustomerServiceImpl implements CustomerService{
 	
 	@Override
 	public Customer find(String cpf) throws BusinessRuleException {
-		return repository.findById(cpf).orElseThrow(() -> new BusinessRuleException(CUSTOMER_NOT_FOUND));
+		return repository.findByCpf(cpf).orElseThrow(() -> new BusinessRuleException(CUSTOMER_NOT_FOUND));
 	}
 	
 	@Override
 	public Customer updateData(String cpf, CustomerDTO customerDTO) throws BusinessRuleException {
-		if (!repository.existsById(cpf)) {
-			throw new BusinessRuleException (CUSTOMER_NOT_FOUND);
-		}
-		Customer customer = updateCustomerData(cpf, customerDTO);
+		Customer customer = repository.findByCpf(cpf).orElseThrow(() -> new BusinessRuleException(CUSTOMER_NOT_FOUND));
+		
+		BeanUtils.copyProperties(customerDTO, customer);
+		
 		return repository.save(customer);
 	}
 	
 	@Override
 	public void delete(String cpf) throws BusinessRuleException {
-		if (!repository.existsById(cpf)) {
-			throw new BusinessRuleException (CUSTOMER_NOT_FOUND);
-		}
-		repository.deleteById(cpf);
+		Customer customer = repository.findByCpf(cpf).orElseThrow(() -> new BusinessRuleException(CUSTOMER_NOT_FOUND));
+		
+		repository.delete(customer);
 	}
 	
 	private Customer insertCustomer(CustomerDTO customerDTO) {
@@ -62,14 +61,6 @@ public class CustomerServiceImpl implements CustomerService{
 		BeanUtils.copyProperties(customerDTO, customer);
 		
 		return customer;
-	}
-	
-	private Customer updateCustomerData(String cpf, CustomerDTO customerDTO) {
-		Customer customer = new Customer();
-		BeanUtils.copyProperties(customerDTO, customer);
-		customer.setCpf(cpf);
-		
-		return customer;		
 	}
 
 }
