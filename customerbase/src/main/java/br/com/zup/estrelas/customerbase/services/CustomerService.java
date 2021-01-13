@@ -8,13 +8,13 @@ import br.com.zup.estrelas.customerbase.exceptions.BusinessRuleException;
 
 public interface CustomerService {
 	
-	public Customer insert (CustomerDTO customerDTO) throws BusinessRuleException;
+	public String insert (CustomerDTO customerDTO) throws BusinessRuleException;
 	
 	public List<Customer> findAll();
 	
 	public Customer find (String cpf) throws BusinessRuleException;
 	
-	public Customer updateData (String cpf, CustomerDTO customerDTO) throws BusinessRuleException;
+	public String updateData (String cpf, CustomerDTO customerDTO) throws BusinessRuleException;
 	
 	public void delete (String cpf) throws BusinessRuleException;
 

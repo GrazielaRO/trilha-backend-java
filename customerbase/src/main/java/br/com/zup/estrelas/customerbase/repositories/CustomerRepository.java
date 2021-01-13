@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import br.com.zup.estrelas.customerbase.entities.Customer;
 
 @Repository
-public interface CustomerRepository extends CrudRepository<Customer, Long>{
+public interface CustomerRepository extends CrudRepository<Customer, String>{
 	
 	boolean existsByCpf(String cpf);
 	

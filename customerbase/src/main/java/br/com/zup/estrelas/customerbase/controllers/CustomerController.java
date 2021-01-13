@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.zup.estrelas.customerbase.dto.CustomerDTO;
 import br.com.zup.estrelas.customerbase.entities.Customer;
-import br.com.zup.estrelas.customerbase.exceptions.BusinessRuleException;
 import br.com.zup.estrelas.customerbase.services.CustomerService;
 
 @RestController
@@ -31,7 +30,7 @@ public class CustomerController {
 	
 	@ResponseStatus(HttpStatus.CREATED)
 	@PostMapping
-	public Customer isert(@Valid @RequestBody CustomerDTO insertCustomerDTO) throws BusinessRuleException {
+	public String isert(@Valid @RequestBody CustomerDTO insertCustomerDTO){
 		return service.insert(insertCustomerDTO);
 	}
 	
@@ -43,19 +42,19 @@ public class CustomerController {
 	
 	@ResponseStatus(HttpStatus.OK)
 	@GetMapping(path = "/{cpf}", produces = {MediaType.APPLICATION_JSON_VALUE})
-	public Customer find (@PathVariable String cpf) throws BusinessRuleException {
+	public Customer find (@PathVariable String cpf){
 		return service.find(cpf);
 	}
 	
 	@ResponseStatus(HttpStatus.OK)
 	@PutMapping(path = "/{cpf}")
-	public Customer updateData (@PathVariable String cpf, @Valid @RequestBody CustomerDTO customerDTO) throws BusinessRuleException {
+	public String updateData (@PathVariable String cpf, @Valid @RequestBody CustomerDTO customerDTO){
 		return service.updateData(cpf, customerDTO);
 	}
 	
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@DeleteMapping(path = "/{cpf}")
-	public void delete (@PathVariable String cpf) throws BusinessRuleException {
+	public void delete (@PathVariable String cpf){
 		service.delete(cpf);
 	}
 

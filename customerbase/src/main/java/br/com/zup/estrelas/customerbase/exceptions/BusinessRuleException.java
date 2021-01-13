@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class BusinessRuleException extends Exception{
+public class BusinessRuleException extends RuntimeException{
 
 	private static final long serialVersionUID = 1L;
 	

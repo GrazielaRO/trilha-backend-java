@@ -2,7 +2,6 @@ package br.com.zup.estrelas.customerbase.service.impl;
 
 import java.util.List;
 
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,12 +21,11 @@ public class CustomerServiceImpl implements CustomerService{
 	CustomerRepository repository;
 	
 	@Override
-	public Customer insert(CustomerDTO customerDTO) throws BusinessRuleException {
+	public String insert(CustomerDTO customerDTO) throws BusinessRuleException {
 		if (repository.existsByCpf(customerDTO.getCpf())) {
 			throw new BusinessRuleException (CUSTUMER_ALREADY_EXISTS);
 		}
-		Customer customer = insertCustomer(customerDTO);
-		return repository.save(customer);
+		return new Customer().create(customerDTO, repository);
 	}
 	
 	@Override
@@ -41,12 +39,10 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 	
 	@Override
-	public Customer updateData(String cpf, CustomerDTO customerDTO) throws BusinessRuleException {
+	public String updateData(String cpf, CustomerDTO customerDTO) throws BusinessRuleException {
 		Customer customer = repository.findByCpf(cpf).orElseThrow(() -> new BusinessRuleException(CUSTOMER_NOT_FOUND));
 		
-		BeanUtils.copyProperties(customerDTO, customer);
-		
-		return repository.save(customer);
+		return customer.update(customerDTO, repository);
 	}
 	
 	@Override
@@ -54,13 +50,6 @@ public class CustomerServiceImpl implements CustomerService{
 		Customer customer = repository.findByCpf(cpf).orElseThrow(() -> new BusinessRuleException(CUSTOMER_NOT_FOUND));
 		
 		repository.delete(customer);
-	}
-	
-	private Customer insertCustomer(CustomerDTO customerDTO) {
-		Customer customer = new Customer();
-		BeanUtils.copyProperties(customerDTO, customer);
-		
-		return customer;
 	}
 
 }
