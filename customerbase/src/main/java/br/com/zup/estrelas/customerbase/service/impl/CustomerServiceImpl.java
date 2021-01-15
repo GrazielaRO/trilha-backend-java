@@ -21,7 +21,7 @@ public class CustomerServiceImpl implements CustomerService{
 	CustomerRepository repository;
 	
 	@Override
-	public String insert(CustomerDTO customerDTO) throws BusinessRuleException {
+	public String insert(CustomerDTO customerDTO){
 		if (repository.existsByCpf(customerDTO.getCpf())) {
 			throw new BusinessRuleException (CUSTUMER_ALREADY_EXISTS);
 		}
@@ -34,7 +34,7 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 	
 	@Override
-	public Customer find(String cpf) throws BusinessRuleException {
+	public Customer find(String cpf) {
 		return repository.findByCpf(cpf).orElseThrow(() -> new BusinessRuleException(CUSTOMER_NOT_FOUND));
 	}
 	
@@ -46,7 +46,7 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 	
 	@Override
-	public void delete(String cpf) throws BusinessRuleException {
+	public void delete(String cpf) {
 		Customer customer = repository.findByCpf(cpf).orElseThrow(() -> new BusinessRuleException(CUSTOMER_NOT_FOUND));
 		
 		repository.delete(customer);
