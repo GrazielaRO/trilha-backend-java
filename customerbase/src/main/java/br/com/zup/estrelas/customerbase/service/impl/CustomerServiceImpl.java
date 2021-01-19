@@ -7,7 +7,8 @@ import org.springframework.stereotype.Service;
 
 import br.com.zup.estrelas.customerbase.dto.CustomerDTO;
 import br.com.zup.estrelas.customerbase.entities.Customer;
-import br.com.zup.estrelas.customerbase.exceptions.BusinessRuleException;
+import br.com.zup.estrelas.customerbase.exceptions.CustomerAlreadyExistsException;
+import br.com.zup.estrelas.customerbase.exceptions.NotFoundException;
 import br.com.zup.estrelas.customerbase.repositories.CustomerRepository;
 import br.com.zup.estrelas.customerbase.services.CustomerService;
 
@@ -23,7 +24,7 @@ public class CustomerServiceImpl implements CustomerService{
 	@Override
 	public String insert(CustomerDTO customerDTO){
 		if (repository.existsByCpf(customerDTO.getCpf())) {
-			throw new BusinessRuleException (CUSTUMER_ALREADY_EXISTS);
+			throw new CustomerAlreadyExistsException (CUSTUMER_ALREADY_EXISTS);
 		}
 		return new Customer().create(customerDTO, repository);
 	}
@@ -35,19 +36,19 @@ public class CustomerServiceImpl implements CustomerService{
 	
 	@Override
 	public Customer find(String cpf) {
-		return repository.findByCpf(cpf).orElseThrow(() -> new BusinessRuleException(CUSTOMER_NOT_FOUND));
+		return repository.findByCpf(cpf).orElseThrow(() -> new NotFoundException(CUSTOMER_NOT_FOUND));
 	}
 	
 	@Override
-	public String updateData(String cpf, CustomerDTO customerDTO) throws BusinessRuleException {
-		Customer customer = repository.findByCpf(cpf).orElseThrow(() -> new BusinessRuleException(CUSTOMER_NOT_FOUND));
+	public String updateData(String cpf, CustomerDTO customerDTO){
+		Customer customer = repository.findByCpf(cpf).orElseThrow(() -> new NotFoundException(CUSTOMER_NOT_FOUND));
 		
 		return customer.update(customerDTO, repository);
 	}
 	
 	@Override
 	public void delete(String cpf) {
-		Customer customer = repository.findByCpf(cpf).orElseThrow(() -> new BusinessRuleException(CUSTOMER_NOT_FOUND));
+		Customer customer = repository.findByCpf(cpf).orElseThrow(() -> new NotFoundException(CUSTOMER_NOT_FOUND));
 		
 		repository.delete(customer);
 	}
