@@ -1,0 +1,121 @@
+2021-01-19 16:12:29,820 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - Starting CustomerbaseApplication using Java 11.0.8 on ZUP-328 with PID 10652 (C:\RepoTrilha\TrilhaBasico\customerbase\target\classes started by Zupper in C:\RepoTrilha\TrilhaBasico\customerbase)
+2021-01-19 16:12:29,826 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - No active profile set, falling back to default profiles: default
+2021-01-19 16:12:31,191 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-19 16:12:31,239 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interfaces.
+2021-01-19 16:12:31,616 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2021-01-19 16:12:31,618 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Initializing ProtocolHandler ["http-nio-8080"]
+2021-01-19 16:12:31,619 [restartedMain] INFO  o.a.c.c.StandardService                            - Starting service [Tomcat]
+2021-01-19 16:12:31,619 [restartedMain] INFO  o.a.c.c.StandardEngine                             - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-19 16:12:31,693 [restartedMain] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring embedded WebApplicationContext
+2021-01-19 16:12:31,693 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 1843 ms
+2021-01-19 16:12:31,829 [restartedMain] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-19 16:12:31,849 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-2 - Starting...
+2021-01-19 16:12:31,896 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-2 - Start completed.
+2021-01-19 16:12:31,897 [restartedMain] INFO  o.h.d.Dialect                                      - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-01-19 16:12:31,995 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-19 16:12:31,996 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-19 16:12:32,041 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729
+2021-01-19 16:12:32,677 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-01-19 16:12:32,866 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-19 16:12:32,995 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-01-19 16:12:33,055 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Starting ProtocolHandler ["http-nio-8080"]
+2021-01-19 16:12:33,069 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-19 16:12:33,079 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper         - Context refreshed
+2021-01-19 16:12:33,080 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper         - Found 1 custom documentation plugin(s)
+2021-01-19 16:12:33,103 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner               - Scanning for api listing references
+2021-01-19 16:12:33,308 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - Started CustomerbaseApplication in 3.686 seconds (JVM running for 519.922)
+2021-01-19 16:12:33,316 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener  - Condition evaluation unchanged
+2021-01-19 16:55:47,965 [Thread-8] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-19 16:55:47,979 [Thread-8] INFO  c.z.h.HikariDataSource                             - HikariPool-2 - Shutdown initiated...
+2021-01-19 16:55:47,989 [Thread-8] INFO  c.z.h.HikariDataSource                             - HikariPool-2 - Shutdown completed.
+2021-01-19 16:55:48,220 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - Starting CustomerbaseApplication using Java 11.0.8 on ZUP-328 with PID 10652 (C:\RepoTrilha\TrilhaBasico\customerbase\target\classes started by Zupper in C:\RepoTrilha\TrilhaBasico\customerbase)
+2021-01-19 16:55:48,222 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - No active profile set, falling back to default profiles: default
+2021-01-19 16:55:48,877 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-19 16:55:48,903 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interfaces.
+2021-01-19 16:55:49,141 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2021-01-19 16:55:49,145 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Initializing ProtocolHandler ["http-nio-8080"]
+2021-01-19 16:55:49,149 [restartedMain] INFO  o.a.c.c.StandardService                            - Starting service [Tomcat]
+2021-01-19 16:55:49,149 [restartedMain] INFO  o.a.c.c.StandardEngine                             - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-19 16:55:49,190 [restartedMain] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring embedded WebApplicationContext
+2021-01-19 16:55:49,191 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 963 ms
+2021-01-19 16:55:49,259 [restartedMain] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-19 16:55:49,275 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-3 - Starting...
+2021-01-19 16:55:49,302 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-3 - Start completed.
+2021-01-19 16:55:49,303 [restartedMain] INFO  o.h.d.Dialect                                      - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-01-19 16:55:49,378 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-19 16:55:49,379 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-19 16:55:49,389 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729
+2021-01-19 16:55:49,764 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-01-19 16:55:49,847 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-19 16:55:49,923 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-01-19 16:55:49,951 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Starting ProtocolHandler ["http-nio-8080"]
+2021-01-19 16:55:49,958 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-19 16:55:49,959 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper         - Context refreshed
+2021-01-19 16:55:49,960 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper         - Found 1 custom documentation plugin(s)
+2021-01-19 16:55:49,972 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner               - Scanning for api listing references
+2021-01-19 16:55:50,064 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - Started CustomerbaseApplication in 1.928 seconds (JVM running for 3116.678)
+2021-01-19 16:55:50,068 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener  - Condition evaluation unchanged
+2021-01-19 16:58:18,579 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-19 16:58:18,580 [http-nio-8080-exec-2] INFO  o.s.w.s.DispatcherServlet                          - Initializing Servlet 'dispatcherServlet'
+2021-01-19 16:58:18,582 [http-nio-8080-exec-2] INFO  o.s.w.s.DispatcherServlet                          - Completed initialization in 2 ms
+2021-01-19 16:58:19,361 [http-nio-8080-exec-2] ERROR b.c.z.e.c.e.GlobalExceptionHandler                 - CUSTUMER ALREADY EXISTS IN THE DATABASE.
+2021-01-19 17:13:07,080 [Thread-13] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-19 17:13:07,082 [Thread-13] INFO  c.z.h.HikariDataSource                             - HikariPool-3 - Shutdown initiated...
+2021-01-19 17:13:07,113 [Thread-13] INFO  c.z.h.HikariDataSource                             - HikariPool-3 - Shutdown completed.
+2021-01-19 17:13:07,306 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - Starting CustomerbaseApplication using Java 11.0.8 on ZUP-328 with PID 10652 (C:\RepoTrilha\TrilhaBasico\customerbase\target\classes started by Zupper in C:\RepoTrilha\TrilhaBasico\customerbase)
+2021-01-19 17:13:07,307 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - No active profile set, falling back to default profiles: default
+2021-01-19 17:13:07,847 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-19 17:13:07,871 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interfaces.
+2021-01-19 17:13:08,139 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2021-01-19 17:13:08,141 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Initializing ProtocolHandler ["http-nio-8080"]
+2021-01-19 17:13:08,150 [restartedMain] INFO  o.a.c.c.StandardService                            - Starting service [Tomcat]
+2021-01-19 17:13:08,150 [restartedMain] INFO  o.a.c.c.StandardEngine                             - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-19 17:13:08,214 [restartedMain] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring embedded WebApplicationContext
+2021-01-19 17:13:08,215 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 905 ms
+2021-01-19 17:13:08,422 [restartedMain] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-19 17:13:08,435 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-4 - Starting...
+2021-01-19 17:13:08,460 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-4 - Start completed.
+2021-01-19 17:13:08,461 [restartedMain] INFO  o.h.d.Dialect                                      - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-01-19 17:13:08,575 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-19 17:13:08,576 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-19 17:13:08,589 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729
+2021-01-19 17:13:09,013 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-01-19 17:13:09,186 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-19 17:13:09,285 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-01-19 17:13:09,329 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Starting ProtocolHandler ["http-nio-8080"]
+2021-01-19 17:13:09,335 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-19 17:13:09,337 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper         - Context refreshed
+2021-01-19 17:13:09,338 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper         - Found 1 custom documentation plugin(s)
+2021-01-19 17:13:09,351 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner               - Scanning for api listing references
+2021-01-19 17:13:09,468 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - Started CustomerbaseApplication in 2.256 seconds (JVM running for 4156.082)
+2021-01-19 17:13:09,471 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener  - Condition evaluation unchanged
+2021-01-19 17:13:38,879 [Thread-18] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-19 17:13:38,880 [Thread-18] INFO  c.z.h.HikariDataSource                             - HikariPool-4 - Shutdown initiated...
+2021-01-19 17:13:38,898 [Thread-18] INFO  c.z.h.HikariDataSource                             - HikariPool-4 - Shutdown completed.
+2021-01-19 17:13:39,054 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - Starting CustomerbaseApplication using Java 11.0.8 on ZUP-328 with PID 10652 (C:\RepoTrilha\TrilhaBasico\customerbase\target\classes started by Zupper in C:\RepoTrilha\TrilhaBasico\customerbase)
+2021-01-19 17:13:39,056 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - No active profile set, falling back to default profiles: default
+2021-01-19 17:13:39,596 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-19 17:13:39,619 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interfaces.
+2021-01-19 17:13:39,799 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2021-01-19 17:13:39,800 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Initializing ProtocolHandler ["http-nio-8080"]
+2021-01-19 17:13:39,800 [restartedMain] INFO  o.a.c.c.StandardService                            - Starting service [Tomcat]
+2021-01-19 17:13:39,801 [restartedMain] INFO  o.a.c.c.StandardEngine                             - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-19 17:13:39,840 [restartedMain] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring embedded WebApplicationContext
+2021-01-19 17:13:39,840 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 775 ms
+2021-01-19 17:13:39,896 [restartedMain] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-19 17:13:39,907 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-5 - Starting...
+2021-01-19 17:13:39,929 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-5 - Start completed.
+2021-01-19 17:13:39,929 [restartedMain] INFO  o.h.d.Dialect                                      - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-01-19 17:13:39,992 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-19 17:13:39,992 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-19 17:13:40,001 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729
+2021-01-19 17:13:40,295 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-01-19 17:13:40,353 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-19 17:13:40,401 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-01-19 17:13:40,421 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Starting ProtocolHandler ["http-nio-8080"]
+2021-01-19 17:13:40,426 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-19 17:13:40,428 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper         - Context refreshed
+2021-01-19 17:13:40,429 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper         - Found 1 custom documentation plugin(s)
+2021-01-19 17:13:40,445 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner               - Scanning for api listing references
+2021-01-19 17:13:40,518 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - Started CustomerbaseApplication in 1.541 seconds (JVM running for 4187.132)
+2021-01-19 17:13:40,521 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener  - Condition evaluation unchanged
