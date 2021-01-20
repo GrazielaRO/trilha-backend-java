@@ -8,6 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import br.com.zup.estrelas.customerbase.dto.CustomerDTO;
 import br.com.zup.estrelas.customerbase.repositories.CustomerRepository;
 import lombok.AllArgsConstructor;
@@ -20,6 +23,8 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "customer")
 public class Customer {
+	
+	private static final Logger logger = LogManager.getLogger(Customer.class);
 	
 	@Column(unique = true, nullable = false)
 	@Id
@@ -51,8 +56,12 @@ public class Customer {
 		this.email = customerDTO.getEmail();
 		this.phoneNumber = customerDTO.getPhoneNumber();
 		this.address = customerDTO.getAddress();
+	
+		String entity = repository.save(this).id;
 		
-		return repository.save(this).id;
+		logger.info("ENTITY CREATED.");
+		
+		return entity;
 	}
 	
 	public String update (CustomerDTO customerDTO, CustomerRepository repository) {
@@ -63,7 +72,11 @@ public class Customer {
 		this.phoneNumber = customerDTO.getPhoneNumber();
 		this.address = customerDTO.getAddress();
 		
-		return repository.save(this).id;
+		String entityUpdated = repository.save(this).id;
+		
+		logger.info("ENTITY UPDATED.");
+		
+		return entityUpdated;
 	}
 	
 }

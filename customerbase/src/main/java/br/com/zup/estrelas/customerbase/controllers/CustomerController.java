@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -28,6 +30,8 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping ("/customers")
 public class CustomerController {
 	
+	private static final Logger logger = LogManager.getLogger(CustomerController.class);
+	
 	@Autowired
 	CustomerService service;
 	
@@ -35,6 +39,7 @@ public class CustomerController {
 	@ResponseStatus(HttpStatus.CREATED)
 	@PostMapping
 	public String isert(@Valid @RequestBody CustomerDTO insertCustomerDTO){
+		logger.info("ENTERED IN CUSTOMER CREAT METHOD.");
 		return service.insert(insertCustomerDTO);
 	}
 	
@@ -42,6 +47,7 @@ public class CustomerController {
 	@ResponseStatus(HttpStatus.OK)
 	@GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
 	public List<Customer> findAll(){
+		logger.info("ENTERED IN LIST ALL CUSTOMER METHOD.");
 		return service.findAll();
 	}
 	
@@ -49,6 +55,7 @@ public class CustomerController {
 	@ResponseStatus(HttpStatus.OK)
 	@GetMapping(path = "/{cpf}", produces = {MediaType.APPLICATION_JSON_VALUE})
 	public Customer find (@PathVariable String cpf){
+		logger.info("GET | CPF" + cpf);
 		return service.find(cpf);
 	}
 	
@@ -56,6 +63,8 @@ public class CustomerController {
 	@ResponseStatus(HttpStatus.OK)
 	@PutMapping(path = "/{cpf}")
 	public String updateData (@PathVariable String cpf, @Valid @RequestBody CustomerDTO customerDTO){
+		logger.info("GET | CPF " + cpf);
+		logger.info("UPDATE " + customerDTO.toString());
 		return service.updateData(cpf, customerDTO);
 	}
 	
@@ -63,6 +72,7 @@ public class CustomerController {
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@DeleteMapping(path = "/{cpf}")
 	public void delete (@PathVariable String cpf){
+		logger.info("DELETE | CPF " + cpf);
 		service.delete(cpf);
 	}
 

@@ -2,6 +2,8 @@ package br.com.zup.estrelas.customerbase.service.impl;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,8 @@ import br.com.zup.estrelas.customerbase.services.CustomerService;
 
 @Service
 public class CustomerServiceImpl implements CustomerService{
+	
+	private static final Logger logger = LogManager.getLogger(CustomerServiceImpl.class);
 	
 	private static final String CUSTOMER_NOT_FOUND = "CUSTOMER NOT FOUND.";
 	private static final String CUSTUMER_ALREADY_EXISTS = "CUSTUMER ALREADY EXISTS IN THE DATABASE.";
@@ -31,12 +35,22 @@ public class CustomerServiceImpl implements CustomerService{
 	
 	@Override
 	public List<Customer> findAll() {
-		return (List<Customer>) repository.findAll();
+		
+		List<Customer> customerList = (List<Customer>) repository.findAll();
+		
+		logger.info("CUSTOMER LIST RETURNED.");
+		
+		return customerList;
 	}
 	
 	@Override
 	public Customer find(String cpf) {
-		return repository.findByCpf(cpf).orElseThrow(() -> new NotFoundException(CUSTOMER_NOT_FOUND));
+		
+		Customer customer = repository.findByCpf(cpf).orElseThrow(() -> new NotFoundException(CUSTOMER_NOT_FOUND));
+		
+		logger.info("CUSTOMER RETURNED.");
+		
+		return customer;
 	}
 	
 	@Override
@@ -51,6 +65,8 @@ public class CustomerServiceImpl implements CustomerService{
 		Customer customer = repository.findByCpf(cpf).orElseThrow(() -> new NotFoundException(CUSTOMER_NOT_FOUND));
 		
 		repository.delete(customer);
+		
+		logger.info("ENTITY DELETED.");
 	}
 
 }

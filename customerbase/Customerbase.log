@@ -119,3 +119,136 @@
 2021-01-19 17:13:40,445 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner               - Scanning for api listing references
 2021-01-19 17:13:40,518 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - Started CustomerbaseApplication in 1.541 seconds (JVM running for 4187.132)
 2021-01-19 17:13:40,521 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener  - Condition evaluation unchanged
+2021-01-19 20:35:38,202 [HikariPool-5 housekeeper] WARN  c.z.h.p.HikariPool                                 - HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=3h28s122ms951µs200ns).
+2021-01-20 08:28:06,716 [HikariPool-5 housekeeper] WARN  c.z.h.p.HikariPool                                 - HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=11h52m52s39ms752µs).
+2021-01-20 09:21:19,551 [http-nio-8080-exec-10] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-20 09:21:19,563 [http-nio-8080-exec-10] INFO  o.s.w.s.DispatcherServlet                          - Initializing Servlet 'dispatcherServlet'
+2021-01-20 09:21:19,568 [http-nio-8080-exec-10] INFO  o.s.w.s.DispatcherServlet                          - Completed initialization in 4 ms
+2021-01-20 09:21:25,644 [http-nio-8080-exec-9] ERROR b.c.z.e.c.e.GlobalExceptionHandler                 - CUSTUMER ALREADY EXISTS IN THE DATABASE.
+2021-01-20 09:23:52,411 [Thread-23] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-20 09:23:52,428 [Thread-23] INFO  c.z.h.HikariDataSource                             - HikariPool-5 - Shutdown initiated...
+2021-01-20 09:23:52,439 [Thread-23] INFO  c.z.h.HikariDataSource                             - HikariPool-5 - Shutdown completed.
+2021-01-20 09:23:52,914 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - Starting CustomerbaseApplication using Java 11.0.8 on ZUP-328 with PID 10652 (C:\RepoTrilha\TrilhaBasico\customerbase\target\classes started by Zupper in C:\RepoTrilha\TrilhaBasico\customerbase)
+2021-01-20 09:23:52,916 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - No active profile set, falling back to default profiles: default
+2021-01-20 09:23:54,149 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-20 09:23:54,219 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interfaces.
+2021-01-20 09:23:54,621 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2021-01-20 09:23:54,624 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Initializing ProtocolHandler ["http-nio-8080"]
+2021-01-20 09:23:54,626 [restartedMain] INFO  o.a.c.c.StandardService                            - Starting service [Tomcat]
+2021-01-20 09:23:54,626 [restartedMain] INFO  o.a.c.c.StandardEngine                             - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-20 09:23:54,695 [restartedMain] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring embedded WebApplicationContext
+2021-01-20 09:23:54,696 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 1774 ms
+2021-01-20 09:23:54,844 [restartedMain] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-20 09:23:54,878 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-6 - Starting...
+2021-01-20 09:23:54,902 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-6 - Start completed.
+2021-01-20 09:23:54,914 [restartedMain] INFO  o.h.d.Dialect                                      - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-01-20 09:23:55,417 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-20 09:23:55,417 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-20 09:23:55,425 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729
+2021-01-20 09:23:55,961 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-01-20 09:23:56,150 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-20 09:23:56,341 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-01-20 09:23:56,380 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Starting ProtocolHandler ["http-nio-8080"]
+2021-01-20 09:23:56,389 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-20 09:23:56,391 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper         - Context refreshed
+2021-01-20 09:23:56,416 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper         - Found 1 custom documentation plugin(s)
+2021-01-20 09:23:56,432 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner               - Scanning for api listing references
+2021-01-20 09:23:56,566 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - Started CustomerbaseApplication in 3.885 seconds (JVM running for 62426.717)
+2021-01-20 09:23:56,568 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener  - Condition evaluation unchanged
+2021-01-20 15:51:25,070 [background-preinit] INFO  o.h.v.i.u.Version                                  - HV000001: Hibernate Validator 6.1.6.Final
+2021-01-20 15:51:25,200 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - Starting CustomerbaseApplication using Java 11.0.8 on ZUP-328 with PID 9900 (C:\RepoTrilha\TrilhaBasico\customerbase\target\classes started by Zupper in C:\RepoTrilha\TrilhaBasico\customerbase)
+2021-01-20 15:51:25,261 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - No active profile set, falling back to default profiles: default
+2021-01-20 15:51:25,581 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor    - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-20 15:51:25,583 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor    - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-20 15:51:31,121 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-20 15:51:31,432 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 291 ms. Found 1 JPA repository interfaces.
+2021-01-20 15:51:36,726 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2021-01-20 15:51:36,819 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Initializing ProtocolHandler ["http-nio-8080"]
+2021-01-20 15:51:36,821 [restartedMain] INFO  o.a.c.c.StandardService                            - Starting service [Tomcat]
+2021-01-20 15:51:36,822 [restartedMain] INFO  o.a.c.c.StandardEngine                             - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-20 15:51:37,501 [restartedMain] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring embedded WebApplicationContext
+2021-01-20 15:51:37,502 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 11915 ms
+2021-01-20 15:51:39,304 [restartedMain] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-20 15:51:39,905 [restartedMain] INFO  o.h.Version                                        - HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-20 15:51:40,737 [restartedMain] INFO  o.h.a.c.Version                                    - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-20 15:51:42,927 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Starting...
+2021-01-20 15:51:52,670 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Start completed.
+2021-01-20 15:51:52,761 [restartedMain] INFO  o.h.d.Dialect                                      - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-01-20 15:52:06,811 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-20 15:52:06,827 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-20 15:52:06,907 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729
+2021-01-20 15:52:12,380 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-01-20 15:52:13,782 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-20 15:52:14,788 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-01-20 15:52:15,125 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Starting ProtocolHandler ["http-nio-8080"]
+2021-01-20 15:52:16,648 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-20 15:52:16,652 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper         - Context refreshed
+2021-01-20 15:52:17,013 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper         - Found 1 custom documentation plugin(s)
+2021-01-20 15:52:17,152 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner               - Scanning for api listing references
+2021-01-20 15:52:18,070 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - Started CustomerbaseApplication in 55.646 seconds (JVM running for 64.464)
+2021-01-20 15:52:52,390 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-20 15:52:52,390 [http-nio-8080-exec-2] INFO  o.s.w.s.DispatcherServlet                          - Initializing Servlet 'dispatcherServlet'
+2021-01-20 15:52:52,392 [http-nio-8080-exec-2] INFO  o.s.w.s.DispatcherServlet                          - Completed initialization in 2 ms
+2021-01-20 15:52:55,563 [http-nio-8080-exec-2] INFO  b.c.z.e.c.e.Customer                               - ENTITY CREATED.
+2021-01-20 15:53:11,583 [http-nio-8080-exec-3] ERROR b.c.z.e.c.e.GlobalExceptionHandler                 - CUSTUMER ALREADY EXISTS IN THE DATABASE.
+2021-01-20 15:54:25,891 [http-nio-8080-exec-7] INFO  b.c.z.e.c.c.CustomerController                     - get | cpf81222070065
+2021-01-20 15:55:09,070 [http-nio-8080-exec-8] INFO  b.c.z.e.c.c.CustomerController                     - get | cpf81222070065
+2021-01-20 15:55:09,070 [http-nio-8080-exec-8] INFO  b.c.z.e.c.c.CustomerController                     - update br.com.zup.estrelas.customerbase.dto.CustomerDTO@5dc214ed
+2021-01-20 15:55:09,287 [http-nio-8080-exec-8] INFO  b.c.z.e.c.e.Customer                               - ENTITY UPDATED.
+2021-01-20 15:56:24,086 [http-nio-8080-exec-10] INFO  b.c.z.e.c.c.CustomerController                     - get | cpf81222070066
+2021-01-20 15:56:24,087 [http-nio-8080-exec-10] INFO  b.c.z.e.c.c.CustomerController                     - update br.com.zup.estrelas.customerbase.dto.CustomerDTO@68d0aabf
+2021-01-20 15:56:24,152 [http-nio-8080-exec-10] ERROR b.c.z.e.c.e.GlobalExceptionHandler                 - CUSTOMER NOT FOUND.
+2021-01-20 16:10:00,687 [background-preinit] INFO  o.h.v.i.u.Version                                  - HV000001: Hibernate Validator 6.1.6.Final
+2021-01-20 16:10:00,776 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - Starting CustomerbaseApplication using Java 11.0.8 on ZUP-328 with PID 9700 (C:\RepoTrilha\TrilhaBasico\customerbase\target\classes started by Zupper in C:\RepoTrilha\TrilhaBasico\customerbase)
+2021-01-20 16:10:00,798 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - No active profile set, falling back to default profiles: default
+2021-01-20 16:10:00,961 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor    - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-20 16:10:00,962 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor    - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-20 16:10:03,004 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-20 16:10:03,135 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 114 ms. Found 1 JPA repository interfaces.
+2021-01-20 16:10:05,156 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2021-01-20 16:10:05,178 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Initializing ProtocolHandler ["http-nio-8080"]
+2021-01-20 16:10:05,180 [restartedMain] INFO  o.a.c.c.StandardService                            - Starting service [Tomcat]
+2021-01-20 16:10:05,180 [restartedMain] INFO  o.a.c.c.StandardEngine                             - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-20 16:10:05,373 [restartedMain] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring embedded WebApplicationContext
+2021-01-20 16:10:05,373 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 4409 ms
+2021-01-20 16:10:05,674 [restartedMain] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-20 16:10:05,773 [restartedMain] INFO  o.h.Version                                        - HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-20 16:10:06,002 [restartedMain] INFO  o.h.a.c.Version                                    - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-20 16:10:06,189 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Starting...
+2021-01-20 16:10:07,171 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Start completed.
+2021-01-20 16:10:07,203 [restartedMain] INFO  o.h.d.Dialect                                      - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-01-20 16:10:10,780 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-20 16:10:10,794 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-20 16:10:10,819 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729
+2021-01-20 16:10:12,117 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-01-20 16:10:12,518 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-20 16:10:12,805 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-01-20 16:10:12,925 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Starting ProtocolHandler ["http-nio-8080"]
+2021-01-20 16:10:12,969 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-20 16:10:12,971 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper         - Context refreshed
+2021-01-20 16:10:13,015 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper         - Found 1 custom documentation plugin(s)
+2021-01-20 16:10:13,078 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner               - Scanning for api listing references
+2021-01-20 16:10:13,492 [restartedMain] INFO  b.c.z.e.c.CustomerbaseApplication                  - Started CustomerbaseApplication in 13.539 seconds (JVM running for 15.643)
+2021-01-20 16:10:56,320 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-20 16:10:56,320 [http-nio-8080-exec-1] INFO  o.s.w.s.DispatcherServlet                          - Initializing Servlet 'dispatcherServlet'
+2021-01-20 16:10:56,323 [http-nio-8080-exec-1] INFO  o.s.w.s.DispatcherServlet                          - Completed initialization in 2 ms
+2021-01-20 16:10:57,702 [http-nio-8080-exec-1] INFO  b.c.z.e.c.c.CustomerController                     - ENTERED IN CUSTOMER CREAT METHOD.
+2021-01-20 16:10:59,833 [http-nio-8080-exec-1] INFO  b.c.z.e.c.e.Customer                               - ENTITY CREATED.
+2021-01-20 16:11:01,994 [http-nio-8080-exec-3] INFO  b.c.z.e.c.c.CustomerController                     - ENTERED IN CUSTOMER CREAT METHOD.
+2021-01-20 16:11:02,039 [http-nio-8080-exec-3] ERROR b.c.z.e.c.e.GlobalExceptionHandler                 - CUSTUMER ALREADY EXISTS IN THE DATABASE.
+2021-01-20 16:11:09,332 [http-nio-8080-exec-4] INFO  b.c.z.e.c.c.CustomerController                     - ENTERED IN LIST ALL CUSTOMER METHOD.
+2021-01-20 16:11:09,398 [http-nio-8080-exec-4] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - CUSTOMER LIST RETURNED.
+2021-01-20 16:11:15,897 [http-nio-8080-exec-5] INFO  b.c.z.e.c.c.CustomerController                     - GET | CPF81222070065
+2021-01-20 16:11:15,909 [http-nio-8080-exec-5] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - CUSTOMER RETURNED.
+2021-01-20 16:11:25,320 [http-nio-8080-exec-6] INFO  b.c.z.e.c.c.CustomerController                     - GET | CPF81222070066
+2021-01-20 16:11:25,393 [http-nio-8080-exec-6] ERROR b.c.z.e.c.e.GlobalExceptionHandler                 - CUSTOMER NOT FOUND.
+2021-01-20 16:11:33,577 [http-nio-8080-exec-7] INFO  b.c.z.e.c.c.CustomerController                     - GET | CPF 81222070066
+2021-01-20 16:11:33,578 [http-nio-8080-exec-7] INFO  b.c.z.e.c.c.CustomerController                     - UPDATE br.com.zup.estrelas.customerbase.dto.CustomerDTO@6e745b3d
+2021-01-20 16:11:33,584 [http-nio-8080-exec-7] ERROR b.c.z.e.c.e.GlobalExceptionHandler                 - CUSTOMER NOT FOUND.
+2021-01-20 16:11:38,728 [http-nio-8080-exec-8] INFO  b.c.z.e.c.c.CustomerController                     - GET | CPF 81222070065
+2021-01-20 16:11:38,729 [http-nio-8080-exec-8] INFO  b.c.z.e.c.c.CustomerController                     - UPDATE br.com.zup.estrelas.customerbase.dto.CustomerDTO@35f20ff3
+2021-01-20 16:11:39,416 [http-nio-8080-exec-8] INFO  b.c.z.e.c.e.Customer                               - ENTITY UPDATED.
+2021-01-20 16:11:56,841 [http-nio-8080-exec-9] INFO  b.c.z.e.c.c.CustomerController                     - DELETE | CPF 81222070066
+2021-01-20 16:11:56,846 [http-nio-8080-exec-9] ERROR b.c.z.e.c.e.GlobalExceptionHandler                 - CUSTOMER NOT FOUND.
+2021-01-20 16:12:01,829 [http-nio-8080-exec-10] INFO  b.c.z.e.c.c.CustomerController                     - DELETE | CPF 81222070065
+2021-01-20 16:12:02,642 [http-nio-8080-exec-10] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - ENTITY DELETED.
