@@ -55,7 +55,7 @@ public class CustomerController {
 	@ResponseStatus(HttpStatus.OK)
 	@GetMapping(path = "/{cpf}", produces = {MediaType.APPLICATION_JSON_VALUE})
 	public Customer find (@PathVariable String cpf){
-		logger.info("GET | CPF" + cpf);
+		logger.info("GET | CPF: " + cpf);
 		return service.find(cpf);
 	}
 	
@@ -63,7 +63,7 @@ public class CustomerController {
 	@ResponseStatus(HttpStatus.OK)
 	@PutMapping(path = "/{cpf}")
 	public String updateData (@PathVariable String cpf, @Valid @RequestBody CustomerDTO customerDTO){
-		logger.info("GET | CPF " + cpf);
+		logger.info("GET | CPF: " + cpf);
 		logger.info("UPDATE " + customerDTO.toString());
 		return service.updateData(cpf, customerDTO);
 	}
@@ -72,7 +72,7 @@ public class CustomerController {
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@DeleteMapping(path = "/{cpf}")
 	public void delete (@PathVariable String cpf){
-		logger.info("DELETE | CPF " + cpf);
+		logger.info("DELETE | CPF: " + cpf);
 		service.delete(cpf);
 	}
 

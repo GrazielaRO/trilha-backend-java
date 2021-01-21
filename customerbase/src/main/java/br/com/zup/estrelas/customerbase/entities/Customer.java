@@ -57,11 +57,11 @@ public class Customer {
 		this.phoneNumber = customerDTO.getPhoneNumber();
 		this.address = customerDTO.getAddress();
 	
-		String entity = repository.save(this).id;
+		String customer = repository.save(this).id;
 		
-		logger.info("ENTITY CREATED.");
+		logger.info("CUSTOMER CREATED.");
 		
-		return entity;
+		return customer;
 	}
 	
 	public String update (CustomerDTO customerDTO, CustomerRepository repository) {
@@ -72,11 +72,11 @@ public class Customer {
 		this.phoneNumber = customerDTO.getPhoneNumber();
 		this.address = customerDTO.getAddress();
 		
-		String entityUpdated = repository.save(this).id;
+		String customerUpdated = repository.save(this).id;
 		
-		logger.info("ENTITY UPDATED.");
+		logger.info("CUSTOMER UPDATED.");
 		
-		return entityUpdated;
+		return customerUpdated;
 	}
 	
 }

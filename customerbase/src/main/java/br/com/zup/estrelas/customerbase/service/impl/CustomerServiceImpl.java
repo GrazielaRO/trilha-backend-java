@@ -66,7 +66,7 @@ public class CustomerServiceImpl implements CustomerService{
 		
 		repository.delete(customer);
 		
-		logger.info("ENTITY DELETED.");
+		logger.info("CUSTOMER DELETED.");
 	}
 
 }
