@@ -11,9 +11,13 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.br.CPF;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
 
+@Setter
 @Getter
+@AllArgsConstructor
 public class CustomerDTO {
 	
 	@NotBlank(message = "{validation.name.blank}")

@@ -1,5 +1,9 @@
 package br.com.zup.estrelas.customerbase.controllers;
 
+import static org.springframework.http.HttpStatus.CREATED;
+import static org.springframework.http.HttpStatus.NO_CONTENT;
+import static org.springframework.http.HttpStatus.OK;
+
 import java.util.List;
 
 import javax.validation.Valid;
@@ -7,7 +11,6 @@ import javax.validation.Valid;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,7 +39,7 @@ public class CustomerController {
 	CustomerService service;
 	
 	@ApiOperation(value="Create a new customer")
-	@ResponseStatus(HttpStatus.CREATED)
+	@ResponseStatus(CREATED)
 	@PostMapping
 	public String isert(@Valid @RequestBody CustomerDTO insertCustomerDTO){
 		logger.info("ENTERED IN CUSTOMER CREAT METHOD.");
@@ -44,7 +47,7 @@ public class CustomerController {
 	}
 	
 	@ApiOperation(value="List all customers")
-	@ResponseStatus(HttpStatus.OK)
+	@ResponseStatus(OK)
 	@GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
 	public List<Customer> findAll(){
 		logger.info("ENTERED IN LIST ALL CUSTOMER METHOD.");
@@ -52,7 +55,7 @@ public class CustomerController {
 	}
 	
 	@ApiOperation(value="Find a customer")
-	@ResponseStatus(HttpStatus.OK)
+	@ResponseStatus(OK)
 	@GetMapping(path = "/{cpf}", produces = {MediaType.APPLICATION_JSON_VALUE})
 	public Customer find (@PathVariable String cpf){
 		logger.info("GET | CPF: " + cpf);
@@ -60,7 +63,7 @@ public class CustomerController {
 	}
 	
 	@ApiOperation(value="Update a customer data")
-	@ResponseStatus(HttpStatus.OK)
+	@ResponseStatus(OK)
 	@PutMapping(path = "/{cpf}")
 	public String updateData (@PathVariable String cpf, @Valid @RequestBody CustomerDTO customerDTO){
 		logger.info("GET | CPF: " + cpf);
@@ -69,7 +72,7 @@ public class CustomerController {
 	}
 	
 	@ApiOperation(value="Delete a customer")
-	@ResponseStatus(HttpStatus.NO_CONTENT)
+	@ResponseStatus(NO_CONTENT)
 	@DeleteMapping(path = "/{cpf}")
 	public void delete (@PathVariable String cpf){
 		logger.info("DELETE | CPF: " + cpf);

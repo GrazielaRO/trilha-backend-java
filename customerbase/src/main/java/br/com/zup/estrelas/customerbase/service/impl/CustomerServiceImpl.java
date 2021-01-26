@@ -36,7 +36,7 @@ public class CustomerServiceImpl implements CustomerService{
 	@Override
 	public List<Customer> findAll() {
 		
-		List<Customer> customerList = (List<Customer>) repository.findAll();
+		List<Customer> customerList = repository.findAll();
 		
 		logger.info("CUSTOMER LIST RETURNED.");
 		

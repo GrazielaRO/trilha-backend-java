@@ -252,3 +252,10 @@
 2021-01-20 16:11:56,846 [http-nio-8080-exec-9] ERROR b.c.z.e.c.e.GlobalExceptionHandler                 - CUSTOMER NOT FOUND.
 2021-01-20 16:12:01,829 [http-nio-8080-exec-10] INFO  b.c.z.e.c.c.CustomerController                     - DELETE | CPF 81222070065
 2021-01-20 16:12:02,642 [http-nio-8080-exec-10] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - ENTITY DELETED.
+2021-01-26 10:56:55,265 [main] INFO  b.c.z.e.c.e.Customer                               - CUSTOMER CREATED.
+2021-01-26 14:22:12,834 [main] INFO  b.c.z.e.c.e.Customer                               - CUSTOMER CREATED.
+2021-01-26 15:00:09,643 [main] INFO  b.c.z.e.c.e.Customer                               - CUSTOMER CREATED.
+2021-01-26 15:07:37,919 [main] INFO  b.c.z.e.c.e.Customer                               - CUSTOMER CREATED.
+2021-01-26 15:16:13,027 [main] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - CUSTOMER RETURNED.
+2021-01-26 15:17:19,244 [main] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - CUSTOMER RETURNED.
+2021-01-26 15:17:51,969 [main] INFO  b.c.z.e.c.e.Customer                               - CUSTOMER CREATED.
