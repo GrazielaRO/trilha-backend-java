@@ -3,6 +3,8 @@ package br.com.zup.estrelas.customerbase.service.impl;
 import static org.mockito.Mockito.*;
 
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -54,8 +56,15 @@ public class CustomerServiceImplTest {
 		service.insert(customerDto);
 
 	}
-
+	
+	@Test
 	public void shouldFindAllCustomers() {
+		
+		List<Customer> customerList = customerListFactory();
+		
+		Mockito.when(repository.findAll()).thenReturn(customerList);
+		
+		Assert.assertEquals(customerList, service.findAll());
 
 	}
 
@@ -116,9 +125,11 @@ public class CustomerServiceImplTest {
 
 		Customer customer = customerFactory(customerDto);
 		
-		Mockito.when(repository.findByCpf(customer.getCpf())).thenReturn(Optional.of(customer));
+		Mockito.when(repository.findByCpf("79885268049")).thenReturn(Optional.of(customer));
 		
-		//???????
+		service.delete("79885268049");
+		
+		Mockito.verify(repository).delete(customer);
 	}
 	
 	@Test(expected = NotFoundException.class)
@@ -149,6 +160,22 @@ public class CustomerServiceImplTest {
 				customerDto.getAddress());
 
 		return customer;
+	}
+	
+	private List<Customer> customerListFactory(){
+		
+		List<Customer> customerList = new ArrayList<>();
+		
+		Customer customerOne = new Customer (UUID.randomUUID().toString(), "Graziela Oliveira",
+				Date.valueOf("1984-10-21"), "33852937078", "grazi@mail.com", "34987654136","Rua da Vitória, 100");
+		
+		Customer customerTwo = new Customer (UUID.randomUUID().toString(), "José Francisco",
+				Date.valueOf("1955-07-31"), "63139533047", "jose@mail.com", "34983567495","Rua da Alegria, 100");
+		
+		customerList.add(customerOne);
+		customerList.add(customerTwo);
+		
+		return customerList;
 	}
 
 }

@@ -260,3 +260,16 @@
 2021-01-26 15:17:19,244 [main] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - CUSTOMER RETURNED.
 2021-01-26 15:17:51,969 [main] INFO  b.c.z.e.c.e.Customer                               - CUSTOMER CREATED.
 2021-01-27 08:37:52,198 [main] INFO  b.c.z.e.c.e.Customer                               - CUSTOMER UPDATED.
+2021-01-27 10:29:27,615 [main] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - CUSTOMER DELETED.
+2021-01-27 14:06:41,990 [main] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - CUSTOMER LIST RETURNED.
+2021-01-27 14:07:59,301 [main] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - CUSTOMER LIST RETURNED.
+2021-01-27 14:09:02,084 [main] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - CUSTOMER LIST RETURNED.
+2021-01-27 14:09:02,095 [main] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - CUSTOMER RETURNED.
+2021-01-27 14:09:02,100 [main] INFO  b.c.z.e.c.e.Customer                               - CUSTOMER UPDATED.
+2021-01-27 14:09:02,102 [main] INFO  b.c.z.e.c.e.Customer                               - CUSTOMER CREATED.
+2021-01-27 14:09:02,104 [main] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - CUSTOMER DELETED.
+2021-01-27 14:10:38,906 [main] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - CUSTOMER LIST RETURNED.
+2021-01-27 14:10:38,924 [main] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - CUSTOMER RETURNED.
+2021-01-27 14:10:38,929 [main] INFO  b.c.z.e.c.e.Customer                               - CUSTOMER UPDATED.
+2021-01-27 14:10:38,932 [main] INFO  b.c.z.e.c.e.Customer                               - CUSTOMER CREATED.
+2021-01-27 14:10:38,936 [main] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - CUSTOMER DELETED.

@@ -62,6 +62,7 @@ public class CustomerServiceImpl implements CustomerService{
 	
 	@Override
 	public void delete(String cpf) {
+		
 		Customer customer = repository.findByCpf(cpf).orElseThrow(() -> new NotFoundException(CUSTOMER_NOT_FOUND));
 		
 		repository.delete(customer);
