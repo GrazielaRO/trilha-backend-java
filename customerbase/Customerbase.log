@@ -259,3 +259,4 @@
 2021-01-26 15:16:13,027 [main] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - CUSTOMER RETURNED.
 2021-01-26 15:17:19,244 [main] INFO  b.c.z.e.c.s.i.CustomerServiceImpl                  - CUSTOMER RETURNED.
 2021-01-26 15:17:51,969 [main] INFO  b.c.z.e.c.e.Customer                               - CUSTOMER CREATED.
+2021-01-27 08:37:52,198 [main] INFO  b.c.z.e.c.e.Customer                               - CUSTOMER UPDATED.

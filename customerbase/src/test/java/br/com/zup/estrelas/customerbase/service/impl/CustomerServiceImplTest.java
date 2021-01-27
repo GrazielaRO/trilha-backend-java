@@ -81,6 +81,58 @@ public class CustomerServiceImplTest {
 		service.find(customerDto.getCpf());
 
 	}
+	
+	@Test
+	public void shouldUpdateCustomer() {
+		
+		CustomerDTO customerDto = customerDTOFactory();
+
+		Customer customer = customerFactory(customerDto);
+		
+		Mockito.when(repository.findByCpf(customer.getCpf())).thenReturn(Optional.of(customer));
+		
+		Mockito.when(repository.save(any())).thenReturn(customer);
+		
+		Assert.assertEquals(service.updateData(customer.getCpf(), customerDto), customer.getId());
+	}
+	
+	@Test(expected = NotFoundException.class)
+	public void shouldNotUpdateCustomer() {
+		
+		CustomerDTO customerDto = customerDTOFactory();
+
+		Customer customer = customerFactory(customerDto);
+		
+		Mockito.when(repository.findByCpf(customer.getCpf())).thenReturn(Optional.empty());
+		
+		service.updateData(customer.getCpf(), customerDto);
+		
+	}
+	
+	@Test
+	public void shouldDeleteCustomer() {
+		
+		CustomerDTO customerDto = customerDTOFactory();
+
+		Customer customer = customerFactory(customerDto);
+		
+		Mockito.when(repository.findByCpf(customer.getCpf())).thenReturn(Optional.of(customer));
+		
+		//???????
+	}
+	
+	@Test(expected = NotFoundException.class)
+	public void shouldNotDeleteCustomer() {
+		
+		CustomerDTO customerDto = customerDTOFactory();
+
+		Customer customer = customerFactory(customerDto);
+		
+		Mockito.when(repository.findByCpf(customer.getCpf())).thenReturn(Optional.empty());
+		
+		service.delete(customer.getCpf());
+		
+	}
 
 	private CustomerDTO customerDTOFactory() {
 
